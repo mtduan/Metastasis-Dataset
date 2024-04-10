@@ -1,5 +1,6 @@
 # Cancer Metastasis Data Repositories
 - **EMT related gene path:** `/fs/scratch/PAS1475/dmt/Benchmark/EMT_Gene_List.tsv`
+- **Metastasis related pathway path:** `/fs/scratch/PAS1475/dmt/Benchmark/pathway_genes.pickle`
 - **infercnvpy:** [https://github.com/icbi-lab/infercnvpy](https://github.com/icbi-lab/infercnvpy)
 - **Monocle2:** [https://cole-trapnell-lab.github.io/monocle-release/docs/](https://cole-trapnell-lab.github.io/monocle-release/docs/)
 
