@@ -1,4 +1,40 @@
 # Cancer Metastasis Data Repositories
+- **infercnvpy:**  https://github.com/icbi-lab/infercnvpy
+## Using Monocle2 for Trajectory Analysis
+
+Monocle2 is a tool used for analyzing and visualizing single-cell RNA-seq data. It can be particularly useful in uncovering the progression and differentiation of cells.
+
+```R
+# Load Monocle2 library
+library(monocle)
+
+# Create a CellDataSet object
+cds <- newCellDataSet(as.matrix(RNA_matrix),
+                      phenoData = new('AnnotatedDataFrame', data = cell_metadata),
+                      featureData = new('AnnotatedDataFrame', data = gene_metadata),
+                      lowerDetectionLimit = 0.5,
+                      expressionFamily = negbinomial.size())
+
+# Preprocess the data
+cds <- estimateSizeFactors(cds)
+cds <- estimateDispersions(cds)
+
+# Differential expression analysis
+diff_test_res <- differentialGeneTest(cds, fullModelFormulaStr = "~pred_label")
+ordering_genes <- row.names(subset(diff_test_res, qval < 0.01))
+
+# Order cells in pseudotime
+cds <- setOrderingFilter(cds, ordering_genes)
+cds <- reduceDimension(cds, max_components = 2, method = 'DDRTree')
+cds <- orderCells(cds)
+
+# Visualize the results
+plot_cell_trajectory(cds, color_by = 'label')
+plot_cell_trajectory(cds, color_by = 'pred_label')
+plot_cell_trajectory(cds, color_by = "Pseudotime")
+plot_cell_trajectory(cds, color_by = "EMT_score")
+
+- **Monocle2:** https://cole-trapnell-lab.github.io/monocle-release/docs/
 - **EMT related gene path:** /fs/scratch/PAS1475/dmt/Benchmark/EMT_Gene_List.tsv
   
 ## Breast Cancer:
