@@ -3,6 +3,7 @@
 ## Breast Cancer:
 ### GSE167036 (8 datasets):
 - **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE167036/Patient_subsample`
+- **InferCNV path:** `/fs/scratch/PAS1475/dmt/Benchmark/GSE167036/gene_locations.csv`
 - **Subpaths:** `Patient1-Patient8`
 - **barcodes.csv:** Cell names
 - **features.csv:** Gene names
