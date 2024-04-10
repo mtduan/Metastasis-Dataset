@@ -5,7 +5,7 @@
 
 ## Using Monocle2 for Trajectory Analysis
 
-Monocle2 is a tool used for analyzing and visualizing single-cell RNA-seq data, particularly useful for uncovering the progression and differentiation of cells.
+Monocle2 is a R package used for analyzing and visualizing single-cell RNA-seq data, particularly useful for uncovering the progression and differentiation of cells.
 
 ```r
 # Load Monocle2 library
@@ -71,7 +71,7 @@ adata.var['start'] = gene_locations_df['start_position']
 adata.var['end'] = gene_locations_df['end_position']
 
 # Perform infercnv analysis
-cnv.tl.infercnv(adata, reference_key="annotate_label", reference_cat=['B Cells'], window_size=250)
+cnv.tl.infercnv(adata, reference_key="annotate_label", reference_cat=['Immune Cells'], window_size=250)
 cnv.tl.pca(adata)
 cnv.pp.neighbors(adata, use_rep='cell_emb')
 cnv.tl.leiden(adata)
@@ -79,7 +79,7 @@ cnv.tl.leiden(adata)
 # Visualize the results
 cnv.tl.umap(adata)
 cnv.tl.cnv_score(adata)
-fig, ((ax1, ax2)) = plt.subplots(1, 2, figsize=(11, 4))
+fig, ((ax1, ax2)) = plt.subplots(1, 2, figsize=(10, 4))
 cnv.pl.umap(adata, color="cnv_score", ax=ax1, show=False)
 cnv.pl.umap(adata, color="pred_label", legend_loc="on data", ax=ax2)
 ```
