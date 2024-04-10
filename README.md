@@ -1,10 +1,13 @@
 # Cancer Metastasis Data Repositories
-- **infercnvpy:**  https://github.com/icbi-lab/infercnvpy
+- **EMT related gene path:** `/fs/scratch/PAS1475/dmt/Benchmark/EMT_Gene_List.tsv`
+- **infercnvpy:** [https://github.com/icbi-lab/infercnvpy](https://github.com/icbi-lab/infercnvpy)
+- **Monocle2:** [https://cole-trapnell-lab.github.io/monocle-release/docs/](https://cole-trapnell-lab.github.io/monocle-release/docs/)
+
 ## Using Monocle2 for Trajectory Analysis
 
-Monocle2 is a tool used for analyzing and visualizing single-cell RNA-seq data. It can be particularly useful in uncovering the progression and differentiation of cells.
+Monocle2 is a tool used for analyzing and visualizing single-cell RNA-seq data, particularly useful for uncovering the progression and differentiation of cells.
 
-```R
+```r
 # Load Monocle2 library
 library(monocle)
 
@@ -33,9 +36,6 @@ plot_cell_trajectory(cds, color_by = 'label')
 plot_cell_trajectory(cds, color_by = 'pred_label')
 plot_cell_trajectory(cds, color_by = "Pseudotime")
 plot_cell_trajectory(cds, color_by = "EMT_score")
-
-- **Monocle2:** https://cole-trapnell-lab.github.io/monocle-release/docs/
-- **EMT related gene path:** /fs/scratch/PAS1475/dmt/Benchmark/EMT_Gene_List.tsv
   
 ## Breast Cancer:
 ### GSE167036 (8 datasets):
