@@ -38,6 +38,52 @@ plot_cell_trajectory(cds, color_by = "Pseudotime")
 plot_cell_trajectory(cds, color_by = "EMT_score")
 ```
 
+## Using infercnvpy for Copy Number Variation Analysis
+
+infercnvpy is a Python package that provides tools for analyzing copy number variations (CNVs) in single-cell RNA-seq data. It allows the identification of CNVs by comparing gene expression in a single cell or group of cells against a reference.
+
+```python
+import pandas as pd
+from scipy.io import mmread
+from scipy.sparse import csr_matrix
+import anndata as ad
+import cnvpytor as cnv
+
+# Assume initial setup with directory paths and file names is done
+
+# Read necessary files: barcodes, features, labels, and matrix
+barcodes = pd.read_csv(barcodes_file)
+features = pd.read_csv(features_file)
+label_data = pd.read_csv(label_file)
+cell_counts_matrix = mmread(matrix_file)
+
+# Preprocess and organize data into an AnnData object
+adata = ad.AnnData(cell_counts_matrix.transpose(), dtype='int32')
+adata.obs['label'] = label
+adata.obs['pred_label'] = pred_label
+adata.obsm['cell_emb'] = cell_embedding
+
+# Add gene location information to the AnnData object
+gene_locations_df = pd.read_csv('gene_locations.csv')
+# Process and add chromosome, start, and end information
+adata.var['chromosome'] = gene_locations_df['chromosome_name'].apply(lambda x: "chr" + x if x in valid_chromosomes else x)
+adata.var['start'] = gene_locations_df['start_position']
+adata.var['end'] = gene_locations_df['end_position']
+
+# Perform infercnv analysis
+cnv.tl.infercnv(adata, reference_key="annotate_label", reference_cat=['B Cells'], window_size=250)
+cnv.tl.pca(adata)
+cnv.pp.neighbors(adata, use_rep='cell_emb')
+cnv.tl.leiden(adata)
+
+# Visualize the results
+cnv.tl.umap(adata)
+cnv.tl.cnv_score(adata)
+fig, ((ax1, ax2)) = plt.subplots(1, 2, figsize=(11, 4))
+cnv.pl.umap(adata, color="cnv_score", ax=ax1, show=False)
+cnv.pl.umap(adata, color="pred_label", legend_loc="on data", ax=ax2)
+```
+
 ## Breast Cancer:
 ### GSE167036 (8 datasets):
 - **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE167036/Patient_subsample`
