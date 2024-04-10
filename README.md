@@ -36,7 +36,8 @@ plot_cell_trajectory(cds, color_by = 'label')
 plot_cell_trajectory(cds, color_by = 'pred_label')
 plot_cell_trajectory(cds, color_by = "Pseudotime")
 plot_cell_trajectory(cds, color_by = "EMT_score")
-  
+```
+
 ## Breast Cancer:
 ### GSE167036 (8 datasets):
 - **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE167036/Patient_subsample`
