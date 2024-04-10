@@ -27,6 +27,7 @@
   
 ### GSE180286 (10 datasets):
 - **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE180286/All_patient`
+- **InferCNV path:** `/fs/scratch/PAS1475/dmt/Benchmark/GSE180286/(patientA2019_2-patientE2020_3)/gene_locations.csv`
 - **Subpaths:** `patientA2019_2- patientE2020_3`
 - **cell_barcodes.csv:** Cell names
 - **gene_symbol.csv:** Gene names
@@ -51,6 +52,7 @@
 ## Head and Neck Cancer:
 ### GSE188737 (7 datasets):
 - **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE167036/Patient_subsample`
+- **InferCNV path:** `/fs/scratch/PAS1475/dmt/Benchmark/GSE188737/gene_locations.csv`
 - **Subpaths:** `HN237- HN279`
 - **cell_barcodes.csv:** Cell names
 - **gene_symbol.csv:** Gene names
