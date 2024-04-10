@@ -1,5 +1,6 @@
 # Cancer Metastasis Data Repositories
-
+- **EMT related gene path:** /fs/scratch/PAS1475/dmt/Benchmark/EMT_Gene_List.tsv
+  
 ## Breast Cancer:
 ### GSE167036 (8 datasets):
 - **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE167036/Patient_subsample`
