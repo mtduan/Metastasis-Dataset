@@ -183,3 +183,24 @@ cnv.pl.umap(adata, color="pred_label", legend_loc="on data", ax=ax2)
   - Regulatory T Cells (Treg): `FOXP3`
   - T Follicular Helper Cells (TFH): `CXCL13`
   - CD8+ T Cells: `CD8A`, `CD8B`
+    
+## Papillary Thyroid Carcinoma:
+### GSE241184 (1 datasets):
+- **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE241184`
+- **cell_names.csv:** Cell names
+- **gene_names.csv:** Gene names
+- **label.csv:** Cell labels (P for primary tumor site, M for metastatic site)
+- **RNA_matrix.mtx:** Gene*Cell expression matrix
+- **Marker Genes Dictionary:**
+  - Epithelial Cells: `CD24`, `EPCAM`
+  - NK Cells: `NKG7`, `KLRD1`, `GNLY`
+  - Macrophages: `CD68`, `FCGR3A`, `MSR1`
+  - Pericytes: `RGS5`, `ACTA2`, `TAGLN`
+  - Progenitor Cells: `STMN1`, `PROM1`
+  - Endothelial Cells: `PECAM1`, `VWF`, `CLDN5`
+  - B Cells: `MS4A1`, `CD19`, `CD79A`
+  - CD8+ T Cells: `CD8A`, `CD8B`, `GZMK`
+  - Fibroblasts: `DCN`, `LUM`, `COL1A1`
+  - T Cells: `CD3D`, `CD3E`, `TRAC`
+  - Myeloid Cells: `CD14`, `CD33`, `LYZ`
+  - Red Blood Cells: `HBA1`, `HBA2`, `HBB`, `GYPA`
