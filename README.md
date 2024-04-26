@@ -160,6 +160,7 @@ cnv.pl.umap(adata, color="pred_label", legend_loc="on data", ax=ax2)
 ## Pancreatic Cancer:
 ### GSE197177 (3 datasets):
 - **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE197177/Patient_subsample`
+- **InferCNV path:** `/fs/scratch/PAS1475/dmt/Benchmark/GSE197177/gene_locations.csv`
 - **Subpaths:** `Patient1-Patient3`
 - **cell_barcodes.csv:** Cell names
 - **gene_symbol.csv:** Gene names
