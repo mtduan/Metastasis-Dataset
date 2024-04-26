@@ -136,7 +136,7 @@ cnv.pl.umap(adata, color="pred_label", legend_loc="on data", ax=ax2)
   
 ## Head and Neck Cancer:
 ### GSE188737 (7 datasets):
-- **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE167036/Patient_subsample`
+- **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE188737`
 - **InferCNV path:** `/fs/scratch/PAS1475/dmt/Benchmark/GSE188737/gene_locations.csv`
 - **Subpaths:** `HN237- HN279`
 - **cell_barcodes.csv:** Cell names
@@ -185,8 +185,9 @@ cnv.pl.umap(adata, color="pred_label", legend_loc="on data", ax=ax2)
   - CD8+ T Cells: `CD8A`, `CD8B`
     
 ## Papillary Thyroid Carcinoma:
-### GSE241184 (1 datasets):
+### GSE241184 (1 dataset):
 - **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE241184`
+- **InferCNV path:** `/fs/scratch/PAS1475/dmt/Benchmark/GSE241184/gene_locations.csv`
 - **cell_names.csv:** Cell names
 - **gene_names.csv:** Gene names
 - **label.csv:** Cell labels (P for primary tumor site, M for metastatic site)
