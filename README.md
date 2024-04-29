@@ -187,7 +187,7 @@ cnv.pl.umap(adata, color="pred_label", legend_loc="on data", ax=ax2)
     
 ## Papillary Thyroid Carcinoma:
 ### GSE241184 (1 dataset):
-- **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis/GSE241184`
+- **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis_new/GSE241184`
 - **InferCNV path:** `/fs/scratch/PAS1475/dmt/Benchmark/GSE241184/gene_locations.csv`
 - **cell_names.csv:** Cell names
 - **gene_names.csv:** Gene names
