@@ -206,3 +206,25 @@ cnv.pl.umap(adata, color="pred_label", legend_loc="on data", ax=ax2)
   - T Cells: `CD3D`, `CD3E`, `TRAC`
   - Myeloid Cells: `CD14`, `CD33`, `LYZ`
   - Red Blood Cells: `HBA1`, `HBA2`, `HBB`, `GYPA`
+
+## Non-Small Cell Lung Cancer:
+### GSE198099 (2 datasets):
+- **Main path:** `/fs/ess/PAS1475/Maoteng/Metastasis_new/GSE198099`
+- **InferCNV path:** `/fs/scratch/PAS1475/dmt/Benchmark/GSE198099/gene_locations.csv`
+- **Subpaths:** `Patient1-Patient2`
+- **cell_names.csv:** Cell names
+- **gene_names.csv:** Gene names
+- **label.csv:** Cell labels (P for primary tumor site, M for metastatic site)
+- **RNA_matrix.mtx:** Gene*Cell expression matrix
+- **Marker Genes Dictionary:**
+  - **Epithelial Cells:** `EPCAM`, `KRT7`, `KRT8`, `KRT18`, `KRT19`, `CDH1`, `ENO2`, `SLC25A2`, `UBE2C`
+  - **T Cells:** `CD3D`, `CD3E`, `CD4`, `CD8A`, `FOXP3`, `CTLA4`, `TNFRSF18`
+  - **B Cells:** `CD19`, `MS4A1`, `CD69`, `CD27`, `CR2`
+  - **NK Cells:** `CD56`, `CD16`, `GNLY`, `NKG7`
+  - **Macrophages:** `CD68`, `CD163`, `MRC1`, `APOE`, `C1QA`, `C1QB`, `CXCL8`, `CCL2`
+  - **Plasma Cells:** `CD38`, `SDC1`
+  - **Dendritic Cells:** `HLA-DRA`, `CD74`, `IRF7`, `NLRP3`
+  - **Fibroblasts:** `FN1`, `TIMP1`, `SPP1`, `ACTA2`, `COL1A1`, `COL3A1`
+  - **Endothelial Cells:** `PECAM1`, `VWF`
+  - **Mast Cells:** `KIT`, `TPSAB1`
+
